@@ -1,0 +1,68 @@
+/* 鹿只高温预警系统样式表 */
+QMainWindow {
+    background-color: #f5f5f5;
+}
+
+QPushButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #45a049;
+}
+
+QPushButton:pressed {
+    background-color: #3d8b40;
+}
+
+QLabel {
+    color: #333;
+    font-size: 12px;
+}
+
+QLineEdit {
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: white;
+}
+
+QComboBox {
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: white;
+}
+
+QTableWidget {
+    border: 1px solid #ddd;
+    background-color: white;
+    gridline-color: #e0e0e0;
+}
+
+QTableWidget::item {
+    padding: 5px;
+}
+
+QTableWidget::item:selected {
+    background-color: #e3f2fd;
+}
+
+QGroupBox {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px;
+}
+

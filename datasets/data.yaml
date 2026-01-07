@@ -1,0 +1,13 @@
+# 鹿只高温预警系统数据集配置
+# Dataset configuration for Deer Thermal Warning System
+
+train: images/train  # train images (relative to 'path')
+val: images/val  # val images (relative to 'path')
+test: images/test # test images (optional)
+
+# number of classes
+nc: 1
+
+# Classes
+names: ['deer']  # 鹿只类别，可根据实际标注情况调整
+
