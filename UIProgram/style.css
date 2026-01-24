@@ -1,68 +1,531 @@
-/* 鹿只高温预警系统样式表 */
-QMainWindow {
-    background-color: #f5f5f5;
-}
+/*!* ============================================*/
+/*   基于计算机视觉的鹿只高温预警系统 - 美化样式表*/
+/*   Deer Thermal Warning System - Enhanced Style Sheet*/
+/*   设计风格：简洁、柔和、扁平化（参考垃圾分类系统界面）*/
+/*   ============================================ *!*/
 
-QPushButton {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-size: 14px;
-}
+/*!* ========== 全局样式 ========== *!*/
+/*QMainWindow {*/
+/*    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,*/
+/*                                stop:0 #e8f4f8, stop:1 #f0f8ff);*/
+/*    border: none;*/
+/*}*/
 
-QPushButton:hover {
-    background-color: #45a049;
-}
+/*QWidget {*/
+/*    font-family: "Microsoft YaHei UI", "Microsoft YaHei", "SimHei", "Arial", sans-serif;*/
+/*    font-size: 13px;*/
+/*    color: #333333;*/
+/*}*/
 
-QPushButton:pressed {
-    background-color: #3d8b40;
-}
+/*!* ========== 主容器框架样式 ========== *!*/
+/*QFrame {*/
+/*    background-color: #ffffff;*/
+/*    border-radius: 8px;*/
+/*}*/
 
-QLabel {
-    color: #333;
-    font-size: 12px;
-}
+/*QFrame#frame {*/
+/*    background-color: #ffffff;*/
+/*    border: 1px solid #e0e0e0;*/
+/*    border-radius: 8px;*/
+/*    padding: 10px;*/
+/*}*/
 
-QLineEdit {
-    border: 1px solid #ddd;
-    padding: 5px;
-    border-radius: 3px;
-    background-color: white;
-}
+/*QFrame#frame_2 {*/
+/*    background-color: #fafafa;*/
+/*    border: 1px dashed #d0d0d0;*/
+/*    border-radius: 6px;*/
+/*    padding: 5px;*/
+/*}*/
 
-QComboBox {
-    border: 1px solid #ddd;
-    padding: 5px;
-    border-radius: 3px;
-    background-color: white;
-}
+/*QFrame#frame_3 {*/
+/*    background-color: #ffffff;*/
+/*    border: 1px solid #e0e0e0;*/
+/*    border-radius: 6px;*/
+/*    padding: 5px;*/
+/*}*/
 
-QTableWidget {
-    border: 1px solid #ddd;
-    background-color: white;
-    gridline-color: #e0e0e0;
-}
+/*QFrame#frame_4 {*/
+/*    background-color: #ffffff;*/
+/*    border: 1px solid #e0e0e0;*/
+/*    border-radius: 8px;*/
+/*    padding: 10px;*/
+/*}*/
 
-QTableWidget::item {
-    padding: 5px;
-}
+/*QFrame#frame_5 {*/
+/*    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,*/
+/*                                stop:0 #4a90e2, stop:1 #5ba3f5);*/
+/*    border: none;*/
+/*    border-radius: 0px;*/
+/*    border-bottom: 2px solid #3a7bc8;*/
+/*}*/
 
-QTableWidget::item:selected {
-    background-color: #e3f2fd;
-}
+/*QFrame#frame_6 {*/
+/*    background-color: #f9f9f9;*/
+/*    border: 1px solid #e0e0e0;*/
+/*    border-radius: 6px;*/
+/*    padding: 12px;*/
+/*}*/
+
+/*!* ========== 标题栏样式 ========== *!*/
+/*QLabel#label_3 {*/
+/*    color: #ffffff;*/
+/*    font-size: 24px;*/
+/*    font-weight: bold;*/
+/*    background: transparent;*/
+/*    padding: 10px;*/
+/*}*/
+
+/*QLabel#label_2,*/
+/*QLabel#label_12 {*/
+/*    color: rgba(255, 255, 255, 0.9);*/
+/*    background: transparent;*/
+/*    font-size: 13px;*/
+/*}*/
+
+/*!* ========== 按钮样式 - 扁平化设计 ========== *!*/
+/*QPushButton {*/
+/*    background-color: #ffffff;*/
+/*    color: #333333;*/
+/*    border: 1px solid #d0d0d0;*/
+/*    padding: 10px 20px;*/
+/*    border-radius: 4px;*/
+/*    font-size: 13px;*/
+/*    font-weight: normal;*/
+/*    min-height: 35px;*/
+/*    min-width: 80px;*/
+/*}*/
+
+/*QPushButton:hover {*/
+/*    background-color: #f5f5f5;*/
+/*    border: 1px solid #b0b0b0;*/
+/*}*/
+
+/*QPushButton:pressed {*/
+/*    background-color: #e8e8e8;*/
+/*    border: 1px solid #999999;*/
+/*}*/
+
+/*QPushButton:disabled {*/
+/*    background-color: #f5f5f5;*/
+/*    color: #999999;*/
+/*    border: 1px solid #e0e0e0;*/
+/*}*/
+
+/*!* ========== 保存按钮样式 ========== *!*/
+/*QPushButton#SaveBtn {*/
+/*    background-color: #4a90e2;*/
+/*    color: #ffffff;*/
+/*    border: 1px solid #3a7bc8;*/
+/*    border-radius: 4px;*/
+/*    padding: 12px 24px;*/
+/*    font-size: 14px;*/
+/*    font-weight: 500;*/
+/*    min-height: 45px;*/
+/*}*/
+
+/*QPushButton#SaveBtn:hover {*/
+/*    background-color: #3a7bc8;*/
+/*    border: 1px solid #2a6ba8;*/
+/*}*/
+
+/*QPushButton#SaveBtn:pressed {*/
+/*    background-color: #2a6ba8;*/
+/*    border: 1px solid #1a5b98;*/
+/*}*/
+
+/*!* ========== 退出按钮样式 ========== *!*/
+/*QPushButton#ExitBtn {*/
+/*    background-color: #e74c3c;*/
+/*    color: #ffffff;*/
+/*    border: 1px solid #c0392b;*/
+/*    border-radius: 4px;*/
+/*    padding: 12px 24px;*/
+/*    font-size: 14px;*/
+/*    font-weight: 500;*/
+/*    min-height: 45px;*/
+/*}*/
+
+/*QPushButton#ExitBtn:hover {*/
+/*    background-color: #c0392b;*/
+/*    border: 1px solid #a93226;*/
+/*}*/
+
+/*QPushButton#ExitBtn:pressed {*/
+/*    background-color: #a93226;*/
+/*    border: 1px solid #922b21;*/
+/*}*/
+
+/*!* ========== 图标按钮样式（文件导入按钮） ========== *!*/
+/*QPushButton#PicBtn,*/
+/*QPushButton#VideoBtn,*/
+/*QPushButton#CapBtn,*/
+/*QPushButton#FilesBtn {*/
+/*    background-color: #ffffff;*/
+/*    border: 1px solid #d0d0d0;*/
+/*    border-radius: 4px;*/
+/*    padding: 8px;*/
+/*    min-width: 32px;*/
+/*    min-height: 32px;*/
+/*}*/
+
+/*QPushButton#PicBtn:hover,*/
+/*QPushButton#VideoBtn:hover,*/
+/*QPushButton#CapBtn:hover,*/
+/*QPushButton#FilesBtn:hover {*/
+/*    background-color: #f0f7ff;*/
+/*    border: 1px solid #4a90e2;*/
+/*    border-radius: 4px;*/
+/*}*/
+
+/*QPushButton#PicBtn:pressed,*/
+/*QPushButton#VideoBtn:pressed,*/
+/*QPushButton#CapBtn:pressed,*/
+/*QPushButton#FilesBtn:pressed {*/
+/*    background-color: #e0efff;*/
+/*    border: 1px solid #3a7bc8;*/
+/*}*/
+
+/*QPushButton#PicBtn:checked,*/
+/*QPushButton#VideoBtn:checked,*/
+/*QPushButton#CapBtn:checked,*/
+/*QPushButton#FilesBtn:checked {*/
+/*    background-color: #4a90e2;*/
+/*    border: 1px solid #3a7bc8;*/
+/*}*/
+
+/*!* ========== 标签样式 ========== *!*/
+/*QLabel {*/
+/*    color: #333333;*/
+/*    font-size: 13px;*/
+/*    background: transparent;*/
+/*}*/
+
+/*!* 标题标签 *!*/
+/*QLabel#label_3 {*/
+/*    color: #ffffff;*/
+/*    font-size: 24px;*/
+/*    font-weight: bold;*/
+/*    background: transparent;*/
+/*}*/
+
+/*!* 显示图像的标签 *!*/
+/*QLabel#label_show {*/
+/*    background-color: #fafafa;*/
+/*    border: 1px dashed #d0d0d0;*/
+/*    border-radius: 6px;*/
+/*    padding: 8px;*/
+/*}*/
+
+/*!* 检测结果显示标签 *!*/
+/*QLabel#label_nums,*/
+/*QLabel#label_conf,*/
+/*QLabel#time_lb,*/
+/*QLabel#label_xmin,*/
+/*QLabel#label_ymin,*/
+/*QLabel#label_xmax,*/
+/*QLabel#label_ymax {*/
+/*    color: #333333;*/
+/*    font-weight: normal;*/
+/*    font-size: 13px;*/
+/*    padding: 4px 8px;*/
+/*    background-color: #f5f5f5;*/
+/*    border-radius: 4px;*/
+/*    border: 1px solid #e0e0e0;*/
+/*    min-height: 20px;*/
+/*}*/
+
+/*!* ========== 输入框样式 ========== *!*/
+/*QLineEdit {*/
+/*    border: 1px solid #d0d0d0;*/
+/*    padding: 8px 12px;*/
+/*    border-radius: 4px;*/
+/*    background-color: #ffffff;*/
+/*    font-size: 13px;*/
+/*    selection-background-color: #4a90e2;*/
+/*    selection-color: #ffffff;*/
+/*    min-height: 20px;*/
+/*}*/
+
+/*QLineEdit:focus {*/
+/*    border: 1px solid #4a90e2;*/
+/*    background-color: #ffffff;*/
+/*    outline: none;*/
+/*}*/
+
+/*QLineEdit:hover {*/
+/*    border: 1px solid #b0b0b0;*/
+/*    background-color: #fafafa;*/
+/*}*/
+
+/*QLineEdit::placeholder {*/
+/*    color: #999999;*/
+/*    font-style: italic;*/
+/*}*/
+
+/*!* ========== 下拉框样式 ========== *!*/
+/*QComboBox {*/
+/*    border: 1px solid #d0d0d0;*/
+/*    padding: 8px 12px;*/
+/*    border-radius: 4px;*/
+/*    background-color: #ffffff;*/
+/*    font-size: 13px;*/
+/*    min-height: 20px;*/
+/*}*/
+
+/*QComboBox:hover {*/
+/*    border: 1px solid #b0b0b0;*/
+/*    background-color: #fafafa;*/
+/*}*/
+
+/*QComboBox:focus {*/
+/*    border: 1px solid #4a90e2;*/
+/*    background-color: #ffffff;*/
+/*}*/
+
+/*QComboBox::drop-down {*/
+/*    border: none;*/
+/*    width: 30px;*/
+/*    background: transparent;*/
+/*    border-left: 1px solid #d0d0d0;*/
+/*    border-top-right-radius: 4px;*/
+/*    border-bottom-right-radius: 4px;*/
+/*}*/
+
+/*QComboBox::down-arrow {*/
+/*    image: none;*/
+/*    border-left: 5px solid transparent;*/
+/*    border-right: 5px solid transparent;*/
+/*    border-top: 6px solid #666666;*/
+/*    width: 0;*/
+/*    height: 0;*/
+/*    margin-right: 8px;*/
+/*}*/
+
+/*QComboBox QAbstractItemView {*/
+/*    border: 1px solid #4a90e2;*/
+/*    selection-background-color: #4a90e2;*/
+/*    selection-color: #ffffff;*/
+/*    background-color: #ffffff;*/
+/*    padding: 4px;*/
+/*    border-radius: 4px;*/
+/*    outline: none;*/
+/*}*/
+
+/*QComboBox QAbstractItemView::item {*/
+/*    padding: 6px;*/
+/*    border-radius: 2px;*/
+/*    min-height: 22px;*/
+/*}*/
+
+/*QComboBox QAbstractItemView::item:hover {*/
+/*    background-color: #f0f7ff;*/
+/*}*/
+
+/*QComboBox QAbstractItemView::item:selected {*/
+/*    background-color: #4a90e2;*/
+/*    color: #ffffff;*/
+/*}*/
+
+/*!* ========== 表格样式 ========== *!*/
+/*QTableWidget {*/
+/*    border: 1px solid #d0d0d0;*/
+/*    background-color: #ffffff;*/
+/*    gridline-color: #e8e8e8;*/
+/*    border-radius: 6px;*/
+/*    selection-background-color: #e8f4ff;*/
+/*    selection-color: #333333;*/
+/*    font-size: 12px;*/
+/*    alternate-background-color: #fafafa;*/
+/*    outline: none;*/
+/*}*/
+
+/*QTableWidget::item {*/
+/*    padding: 8px;*/
+/*    border: none;*/
+/*    min-height: 35px;*/
+/*}*/
+
+/*QTableWidget::item:selected {*/
+/*    background-color: #e8f4ff;*/
+/*    color: #333333;*/
+/*}*/
+
+/*QTableWidget::item:hover {*/
+/*    background-color: #f0f7ff;*/
+/*}*/
+
+/*QTableWidget::item:alternate {*/
+/*    background-color: #fafafa;*/
+/*}*/
+
+/*QTableWidget::item:selected:alternate {*/
+/*    background-color: #e8f4ff;*/
+/*}*/
+
+/*!* 表头样式 *!*/
+/*QHeaderView::section {*/
+/*    background-color: #f5f5f5;*/
+/*    color: #333333;*/
+/*    padding: 10px 8px;*/
+/*    border: none;*/
+/*    border-right: 1px solid #e0e0e0;*/
+/*    border-bottom: 1px solid #e0e0e0;*/
+/*    font-weight: 500;*/
+/*    font-size: 13px;*/
+/*    min-height: 35px;*/
+/*}*/
+
+/*QHeaderView::section:first {*/
+/*    border-top-left-radius: 6px;*/
+/*}*/
+
+/*QHeaderView::section:last {*/
+/*    border-top-right-radius: 6px;*/
+/*    border-right: none;*/
+/*}*/
+
+/*QHeaderView::section:hover {*/
+/*    background-color: #eeeeee;*/
+/*}*/
+
+/*!* ========== 分组框样式 ========== *!*/
+/*QGroupBox {*/
+/*    border: 1px solid #d0d0d0;*/
+/*    border-radius: 6px;*/
+/*    margin-top: 15px;*/
+/*    padding-top: 15px;*/
+/*    font-weight: 500;*/
+/*    font-size: 15px;*/
+/*    color: #333333;*/
+/*    background-color: #ffffff;*/
+/*    padding-left: 10px;*/
+/*    padding-right: 10px;*/
+/*    padding-bottom: 10px;*/
+/*}*/
+
+/*QGroupBox::title {*/
+/*    subcontrol-origin: margin;*/
+/*    subcontrol-position: top left;*/
+/*    left: 15px;*/
+/*    padding: 0 8px;*/
+/*    background-color: #ffffff;*/
+/*    color: #333333;*/
+/*    font-weight: 500;*/
+/*    font-size: 15px;*/
+/*}*/
+
+/*!* ========== 滚动条样式 ========== *!*/
+/*QScrollBar:vertical {*/
+/*    border: none;*/
+/*    background: #f5f5f5;*/
+/*    width: 12px;*/
+/*    margin: 0;*/
+/*    border-radius: 6px;*/
+/*}*/
+
+/*QScrollBar::handle:vertical {*/
+/*    background: #c0c0c0;*/
+/*    min-height: 30px;*/
+/*    border-radius: 6px;*/
+/*    margin: 2px;*/
+/*}*/
+
+/*QScrollBar::handle:vertical:hover {*/
+/*    background: #a0a0a0;*/
+/*}*/
+
+/*QScrollBar::add-line:vertical,*/
+/*QScrollBar::sub-line:vertical {*/
+/*    height: 0;*/
+/*}*/
+
+/*QScrollBar:horizontal {*/
+/*    border: none;*/
+/*    background: #f5f5f5;*/
+/*    height: 12px;*/
+/*    margin: 0;*/
+/*    border-radius: 6px;*/
+/*}*/
+
+/*QScrollBar::handle:horizontal {*/
+/*    background: #c0c0c0;*/
+/*    min-width: 30px;*/
+/*    border-radius: 6px;*/
+/*    margin: 2px;*/
+/*}*/
+
+/*QScrollBar::handle:horizontal:hover {*/
+/*    background: #a0a0a0;*/
+/*}*/
+
+/*QScrollBar::add-line:horizontal,*/
+/*QScrollBar::sub-line:horizontal {*/
+/*    width: 0;*/
+/*}*/
+
+/*!* ========== 状态栏样式 ========== *!*/
+/*QStatusBar {*/
+/*    background-color: #f5f5f5;*/
+/*    border-top: 1px solid #e0e0e0;*/
+/*    color: #666666;*/
+/*    font-size: 12px;*/
+/*}*/
+
+/*!* ========== 工具提示样式 ========== *!*/
+/*QToolTip {*/
+/*    background-color: #333333;*/
+/*    color: #ffffff;*/
+/*    border: 1px solid #666666;*/
+/*    border-radius: 4px;*/
+/*    padding: 6px 10px;*/
+/*    font-size: 12px;*/
+/*}*/
+
+/*!* ========== 特殊标签样式（检测结果区域） ========== *!*/
+/*QLabel#label_4 {*/
+/*    color: #333333;*/
+/*    font-weight: 500;*/
+/*    font-size: 15px;*/
+/*    background: transparent;*/
+/*}*/
+
+/*QLabel#label_5,*/
+/*QLabel#label_6,*/
+/*QLabel#label_7,*/
+/*QLabel#label_8,*/
+/*QLabel#label_9,*/
+/*QLabel#label_10,*/
+/*QLabel#label_11 {*/
+/*    color: #333333;*/
+/*    font-weight: 500;*/
+/*    font-size: 13px;*/
+/*    background: transparent;*/
+/*}*/
+
+/*!* ========== 表格预警行样式 ========== *!*/
+/*QTableWidget::item[foreground="#ff0000"] {*/
+/*    font-weight: 600;*/
+/*    background-color: #fff5f5;*/
+/*}*/
+
+/*QTableWidget::item:selected[foreground="#ff0000"] {*/
+/*    background: #ffe8e8;*/
+/*    color: #cc0000;*/
+/*}*/
 
 QGroupBox {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-weight: bold;
-}
+    border: 2px solid gray;
+    }
 
-QGroupBox::title {
-    subcontrol-origin: margin;
-    left: 10px;
-    padding: 0 5px;
-}
+QPushButton#SaveBtn{color:black;
+            background-color:rgb(211, 211, 211);
+            border-radius:6px}
+QPushButton#ExitBtn{color:black;
+            background-color:rgb(211, 211, 211);
+            border-radius:6px}
+QPushButton:hover{color:red}
 
+QPushButton:pressed{background-color:rgb(180,180,180);border: None;}
+
+
+#MainWindow{border-image:url(UIProgram/ui_imgs/bg4.png)}
